@@ -36,7 +36,7 @@ in
     security.sudo.enable = false;
     security.doas = {
       enable = true;
-      extraRules = map mkRule [ "flr" ];
+      extraRules = map mkRule [ "flr" "zsm" ];
     };
   };
 }

@@ -143,6 +143,35 @@
               }
             );
 
+            # my high end desktop machine
+            work = withSystem "x86_64-linux" (
+              { system, ... }:
+              nixpkgs.lib.nixosSystem {
+                inherit system;
+
+                # vaultix & home-manager need this
+                specialArgs = {
+                  inherit inputs;
+                };
+                modules = [
+                  nixos-hardware.nixosModules.common-cpu-amd
+                  nixos-hardware.nixosModules.common-pc-ssd
+
+                  disko.nixosModules.disko
+
+                  ./hosts/work
+
+                  # home manager
+                  home-manager.nixosModules.home-manager
+                  {
+                    home-manager.useGlobalPkgs = true;
+                    home-manager.useUserPackages = true;
+                    home-manager.users.flr = import ./home/users/zsm.nix;
+                  }
+                ];
+              }
+            );
+
             # my old laptop
             x1c = withSystem "x86_64-linux" (
               { system, ... }:
