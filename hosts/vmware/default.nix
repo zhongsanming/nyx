@@ -1,7 +1,7 @@
 _: {
   imports = [
     ../minimal
-    ../users/zsm.nix
+    ../../users/zsm.nix
 
     ../optional/systemd-boot.nix
 
