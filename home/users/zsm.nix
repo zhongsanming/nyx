@@ -1,4 +1,4 @@
-_: {
+{ pkgs, ... }: {
   imports = [
     # unmanaged packages
     ../modules/cli-packages.nix

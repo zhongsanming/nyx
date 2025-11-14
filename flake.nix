@@ -166,7 +166,7 @@
                   {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
-                    home-manager.users.flr = import ./home/users/zsm.nix;
+                    home-manager.users.zsm = import ./home/users/zsm.nix;
                   }
                 ];
               }
