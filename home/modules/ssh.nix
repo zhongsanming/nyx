@@ -19,7 +19,7 @@ _: {
           hostname = "github.com";
           user = "git";
           # identityFile = "/home/flr/.ssh/id_rsa";
-          proxyJump = "vultr";
+          # proxyJump = "vultr";
         };
         "gl" = {
           hostname = "gitlab.com";

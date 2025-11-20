@@ -6,6 +6,10 @@ _: {
     ../vmware
   ];
 
+  networking.hosts = {
+    "192.168.2.188" = [ "git.ztzh.com" ];
+  };
+
   time.timeZone = "Asia/Shanghai";
   networking.hostName = "zsm";
 

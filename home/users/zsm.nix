@@ -1,9 +1,10 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
     # unmanaged packages
     ../modules/cli-packages.nix
 
-    # ../modules/git.nix
+    ../modules/git.nix
     ../modules/ssh.nix
     ../modules/helix.nix
     ../modules/fish.nix
@@ -21,11 +22,11 @@
     ../modules/dunst.nix
     ../modules/fcitx5.nix
 
-    ../modules/wayland-work.nix
+    # ../modules/x11.nix
+    # ../modules/wayland-work.nix
   ];
 
   config = {
-
     home.packages = [
       pkgs.zathura
       pkgs.slurp
@@ -39,9 +40,9 @@
       pkgs.wezterm
     ];
 
-    programs = {
-      mpv.enable = true;
-    };
+    # programs = {
+    #   mpv.enable = true;
+    # };
 
     home = {
       username = "zsm";

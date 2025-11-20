@@ -48,7 +48,7 @@ _: {
         downloads = {
           location = {
             suggestion = "filename";
-            directory = "/home/flr/res/downloads";
+            directory = "~/res/downloads";
           };
           position = "bottom";
           remove_finished = 8000;

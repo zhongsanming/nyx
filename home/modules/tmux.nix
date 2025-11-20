@@ -6,7 +6,7 @@
       shell = lib.getExe pkgs.fish;
       baseIndex = 1;
       keyMode = "vi";
-      prefix = "C-a";
+      # prefix = "C-b";
     };
   };
 }
