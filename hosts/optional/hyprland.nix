@@ -14,6 +14,16 @@ _: {
             comment = "Hyprland compositor managed by UWSM";
             binPath = "/run/current-system/sw/bin/Hyprland";
           };
+          niri = {
+            prettyName = "Niri";
+            comment = "Niri compositor managed by UWSM";
+            binPath = "/run/current-system/sw/bin/niri";
+          };
+          sway = {
+            prettyName = "Sway";
+            comment = "Sway compositor managed by UWSM";
+            binPath = "/run/current-system/sw/bin/sway";
+          };
         };
       };
       hyprland = {
@@ -21,6 +31,8 @@ _: {
         withUWSM = true;
         xwayland.enable = false;
       };
+      niri.enable = true;
+      sway.enable = true;
     };
   };
 }

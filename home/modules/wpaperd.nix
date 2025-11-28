@@ -11,7 +11,7 @@ _: {
             sorting = "random";
           };
           any = {
-            path = "/home/flr/res/images/fav";
+            path = "~/res/images/fav";
           };
         };
       };

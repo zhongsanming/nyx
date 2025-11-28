@@ -17,16 +17,20 @@ _: {
               timezone = "Asia/Shanghai";
             };
 
-            "hyprland/workspaces" = {
-              # we want every workspace show on every outputs
-              persistent-workspaces = builtins.listToAttrs (
-                builtins.genList (idx: {
-                  name = toString (idx + 1);
-                  value = [ ];
-                }) 9
-              );
-              all-outputs = true;
-            };
+            # "niri/workspaces" = {
+            #   all-outputs = true;
+            # };
+
+            # "hyprland/workspaces" = {
+            #   # we want every workspace show on every outputs
+            #   persistent-workspaces = builtins.listToAttrs (
+            #     builtins.genList (idx: {
+            #       name = toString (idx + 1);
+            #       value = [ ];
+            #     }) 9
+            #   );
+            #   all-outputs = true;
+            # };
 
             network = {
               format-disconnected = "󰯡";
@@ -78,8 +82,10 @@ _: {
 
             modules-left = [
               "clock"
-              "hyprland/workspaces"
-              "hyprland/window"
+              "niri/workspaces"
+              "niri/window"
+              # "hyprland/workspaces"
+              # "hyprland/window"
             ];
 
             modules-right = [

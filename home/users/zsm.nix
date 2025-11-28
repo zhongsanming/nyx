@@ -23,7 +23,7 @@
     ../modules/fcitx5.nix
 
     # ../modules/x11.nix
-    # ../modules/wayland-work.nix
+    ../modules/wayland-work.nix
   ];
 
   config = {
@@ -32,12 +32,13 @@
       pkgs.slurp
       pkgs.grim
       pkgs.imv
+      pkgs.swayimg
       pkgs.alacritty
-      pkgs.kitty
-      pkgs.kdePackages.konsole
-      pkgs.ghostty
-      pkgs.st
-      pkgs.wezterm
+      # pkgs.kitty
+      # pkgs.kdePackages.konsole
+      # pkgs.ghostty
+      # pkgs.st
+      # pkgs.wezterm
     ];
 
     # programs = {

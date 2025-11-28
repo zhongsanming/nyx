@@ -14,6 +14,6 @@ _: {
 
   config = {
     virtualisation.vmware.guest.enable = true;
-    virtualisation.hypervGuest.enable = true;
+    # virtualisation.hypervGuest.enable = true;
   };
 }
