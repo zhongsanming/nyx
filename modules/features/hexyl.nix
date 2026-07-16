@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.hexyl ];
     };
   };
+  den.aspects."tags-hexyl" = { includes = [ den.aspects.hexyl ]; };
 }

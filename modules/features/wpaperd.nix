@@ -10,4 +10,5 @@
       };
     };
   };
+  den.aspects."tags-wpaperd" = { includes = [ den.aspects.wpaperd ]; };
 }

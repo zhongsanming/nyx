@@ -4,4 +4,5 @@
   programs.zathura.enable = true;
     };
   };
+  den.aspects."tags-zathura" = { includes = [ den.aspects.zathura ]; };
 }

@@ -92,4 +92,5 @@
       programs.tmux.shell = lib.getExe pkgs.fish;
     };
   };
+  den.aspects."tags-fish" = { includes = [ den.aspects.fish ]; };
 }

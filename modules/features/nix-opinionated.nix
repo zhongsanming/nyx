@@ -5,4 +5,5 @@
       nix.nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") (lib.filterAttrs (_: v: lib.isType "flake" v) inputs);
     };
   };
+  den.aspects."tags-nix-opinionated" = { includes = [ den.aspects.nix-opinionated ]; };
 }

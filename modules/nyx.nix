@@ -3,48 +3,48 @@
   den.aspects.nyx = {
     includes = [
       # preservation
-      den.aspects.preservation
+      den.aspects."tags-preservation"
       # core system
-      den.aspects.nix den.aspects.nix-opinionated den.aspects.nix-mirror
-      den.aspects.users den.aspects.root den.aspects.sudo
-      den.aspects.firewall den.aspects.i18n den.aspects.envvars
-      den.aspects.constants den.aspects.doc den.aspects.firmware
-      den.aspects.ssh
+      den.aspects."tags-nix" den.aspects."tags-nix-opinionated" den.aspects."tags-nix-mirror"
+      den.aspects."tags-users" den.aspects."tags-root" den.aspects."tags-sudo"
+      den.aspects."tags-firewall" den.aspects."tags-i18n" den.aspects."tags-envvars"
+      den.aspects."tags-constants" den.aspects."tags-doc" den.aspects."tags-firmware"
+      den.aspects."tags-ssh"
       # CLI tools
-      den.aspects.fish den.aspects.git den.aspects.helix
-      den.aspects.direnv den.aspects.tmux den.aspects.bat
-      den.aspects.yazi den.aspects.eza den.aspects.bottom
-      den.aspects.tealdeer den.aspects.fd den.aspects.ripgrep
-      den.aspects.jq den.aspects.fonts den.aspects.pcscd
-      den.aspects.age-plugin-yubikey den.aspects.btrfs
-      den.aspects.choose den.aspects.comma den.aspects.compsize
-      den.aspects.difftastic den.aspects.duf den.aspects.dufs
-      den.aspects.git-filter-repo den.aspects.gitui den.aspects.grex
-      den.aspects.hexyl den.aspects.hgrep den.aspects.jid
-      den.aspects.lsof den.aspects.manix den.aspects.ncdu
-      den.aspects.nix-diff den.aspects.nix-du den.aspects.nix-index
-      den.aspects.nix-melt den.aspects.nix-output-monitor den.aspects.nix-tree
-      den.aspects.pfetch den.aspects.procs den.aspects.rage
-      den.aspects.tokei den.aspects.wget den.aspects.xh
-      den.aspects.ykman den.aspects.you-get den.aspects.yt-dlp
-      den.aspects.zola
+      den.aspects."tags-fish" den.aspects."tags-git" den.aspects."tags-helix"
+      den.aspects."tags-direnv" den.aspects."tags-tmux" den.aspects."tags-bat"
+      den.aspects."tags-yazi" den.aspects."tags-eza" den.aspects."tags-bottom"
+      den.aspects."tags-tealdeer" den.aspects."tags-fd" den.aspects."tags-ripgrep"
+      den.aspects."tags-jq" den.aspects."tags-fonts" den.aspects."tags-pcscd"
+      den.aspects."tags-age-plugin-yubikey" den.aspects."tags-btrfs"
+      den.aspects."tags-choose" den.aspects."tags-comma" den.aspects."tags-compsize"
+      den.aspects."tags-difftastic" den.aspects."tags-duf" den.aspects."tags-dufs"
+      den.aspects."tags-git-filter-repo" den.aspects."tags-gitui" den.aspects."tags-grex"
+      den.aspects."tags-hexyl" den.aspects."tags-hgrep" den.aspects."tags-jid"
+      den.aspects."tags-lsof" den.aspects."tags-manix" den.aspects."tags-ncdu"
+      den.aspects."tags-nix-diff" den.aspects."tags-nix-du" den.aspects."tags-nix-index"
+      den.aspects."tags-nix-melt" den.aspects."tags-nix-output-monitor" den.aspects."tags-nix-tree"
+      den.aspects."tags-pfetch" den.aspects."tags-procs" den.aspects."tags-rage"
+      den.aspects."tags-tokei" den.aspects."tags-wget" den.aspects."tags-xh"
+      den.aspects."tags-ykman" den.aspects."tags-you-get" den.aspects."tags-yt-dlp"
+      den.aspects."tags-zola"
       # desktop
-      den.aspects.pipewire den.aspects.uwsm
-      den.aspects.hyprland den.aspects.niri den.aspects.greetd
-      den.aspects.alacritty den.aspects.waybar den.aspects.wpaperd
-      den.aspects.bibata den.aspects.mako den.aspects.chromium
-      den.aspects.fcitx5 den.aspects.hypridle den.aspects.hyprlock
-      den.aspects.qutebrowser
-      den.aspects.blender den.aspects.copyq den.aspects.freecad
-      den.aspects.gh den.aspects.gnuplot den.aspects.kicad
-      den.aspects.mpv den.aspects.obs den.aspects.swayimg
-      den.aspects.telegram den.aspects.vial den.aspects.wofi
-      den.aspects.zathura
+      den.aspects."tags-pipewire" den.aspects."tags-uwsm"
+      den.aspects."tags-hyprland" den.aspects."tags-niri" den.aspects."tags-greetd"
+      den.aspects."tags-alacritty" den.aspects."tags-waybar" den.aspects."tags-wpaperd"
+      den.aspects."tags-bibata" den.aspects."tags-mako" den.aspects."tags-chromium"
+      den.aspects."tags-fcitx5" den.aspects."tags-hypridle" den.aspects."tags-hyprlock"
+      den.aspects."tags-qutebrowser"
+      den.aspects."tags-blender" den.aspects."tags-copyq" den.aspects."tags-freecad"
+      den.aspects."tags-gh" den.aspects."tags-gnuplot" den.aspects."tags-kicad"
+      den.aspects."tags-mpv" den.aspects."tags-obs" den.aspects."tags-swayimg"
+      den.aspects."tags-telegram" den.aspects."tags-vial" den.aspects."tags-wofi"
+      den.aspects."tags-zathura"
       # laptop
-      den.aspects.bluetooth den.aspects.wireless
-      den.aspects.glwifi den.aspects.libinput
+      den.aspects."tags-bluetooth" den.aspects."tags-wireless"
+      den.aspects."tags-glwifi" den.aspects."tags-libinput"
       # services
-      den.aspects.v2ray
+      den.aspects."tags-v2ray"
     ];
 
     nixos = { pkgs, lib, config, ... }: {

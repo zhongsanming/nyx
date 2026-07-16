@@ -46,4 +46,5 @@
 
     };
   };
+  den.aspects."tags-fcitx5" = { includes = [ den.aspects.fcitx5 ]; };
 }

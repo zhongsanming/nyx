@@ -5,4 +5,5 @@
       services.blueman.enable = true;
     };
   };
+  den.aspects."tags-bluetooth" = { includes = [ den.aspects.bluetooth ]; };
 }

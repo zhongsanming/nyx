@@ -51,4 +51,5 @@
       };
     };
   };
+  den.aspects."tags-qutebrowser" = { includes = [ den.aspects.qutebrowser ]; };
 }

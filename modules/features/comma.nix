@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.comma ];
     };
   };
+  den.aspects."tags-comma" = { includes = [ den.aspects.comma ]; };
 }

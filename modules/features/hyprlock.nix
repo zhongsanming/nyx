@@ -16,4 +16,5 @@
       };
     };
   };
+  den.aspects."tags-hyprlock" = { includes = [ den.aspects.hyprlock ]; };
 }

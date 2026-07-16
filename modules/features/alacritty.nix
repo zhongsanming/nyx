@@ -10,4 +10,5 @@
       };
     };
   };
+  den.aspects."tags-alacritty" = { includes = [ den.aspects.alacritty ]; };
 }

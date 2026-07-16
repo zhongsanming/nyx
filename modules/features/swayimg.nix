@@ -4,4 +4,5 @@
   programs.swayimg.enable = true;
     };
   };
+  den.aspects."tags-swayimg" = { includes = [ den.aspects.swayimg ]; };
 }

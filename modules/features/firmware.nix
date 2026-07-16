@@ -5,4 +5,5 @@
       hardware.enableRedistributableFirmware = true;
     };
   };
+  den.aspects."tags-firmware" = { includes = [ den.aspects.firmware ]; };
 }

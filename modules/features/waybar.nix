@@ -51,4 +51,5 @@
       };
     };
   };
+  den.aspects."tags-waybar" = { includes = [ den.aspects.waybar ]; };
 }

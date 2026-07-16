@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.hgrep ];
     };
   };
+  den.aspects."tags-hgrep" = { includes = [ den.aspects.hgrep ]; };
 }

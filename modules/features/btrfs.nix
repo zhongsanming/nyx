@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.btrfs-progs ];
     };
   };
+  den.aspects."tags-btrfs" = { includes = [ den.aspects.btrfs ]; };
 }

@@ -6,4 +6,5 @@
         lib.mkOverride 100 "${lib.getExe pkgs.wofi} --show drun";
     };
   };
+  den.aspects."tags-wofi" = { includes = [ den.aspects.wofi ]; };
 }

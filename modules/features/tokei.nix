@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.tokei ];
     };
   };
+  den.aspects."tags-tokei" = { includes = [ den.aspects.tokei ]; };
 }

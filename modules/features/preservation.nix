@@ -50,4 +50,5 @@
       };
     };
   };
+  den.aspects."tags-preservation" = { includes = [ den.aspects.preservation ]; };
 }

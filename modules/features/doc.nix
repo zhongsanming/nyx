@@ -8,4 +8,5 @@
       };
     };
   };
+  den.aspects."tags-doc" = { includes = [ den.aspects.doc ]; };
 }

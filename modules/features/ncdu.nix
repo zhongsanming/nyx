@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.ncdu ];
     };
   };
+  den.aspects."tags-ncdu" = { includes = [ den.aspects.ncdu ]; };
 }

@@ -21,4 +21,5 @@
       };
     };
   };
+  den.aspects."tags-fonts" = { includes = [ den.aspects.fonts ]; };
 }

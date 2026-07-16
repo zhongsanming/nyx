@@ -64,4 +64,5 @@
       };
     };
   };
+  den.aspects."tags-helix" = { includes = [ den.aspects.helix ]; };
 }

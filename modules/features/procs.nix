@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.procs ];
     };
   };
+  den.aspects."tags-procs" = { includes = [ den.aspects.procs ]; };
 }

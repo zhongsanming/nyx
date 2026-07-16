@@ -26,4 +26,5 @@
       programs.helix.settings.keys.normal.space.i = lib.mkForce ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name}";
     };
   };
+  den.aspects."tags-git" = { includes = [ den.aspects.git ]; };
 }

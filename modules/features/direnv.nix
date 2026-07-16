@@ -19,4 +19,5 @@
       };
     };
   };
+  den.aspects."tags-direnv" = { includes = [ den.aspects.direnv ]; };
 }

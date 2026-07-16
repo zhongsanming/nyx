@@ -7,4 +7,5 @@
       };
     };
   };
+  den.aspects."tags-copyq" = { includes = [ den.aspects.copyq ]; };
 }

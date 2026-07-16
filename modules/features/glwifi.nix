@@ -7,4 +7,5 @@
       };
     };
   };
+  den.aspects."tags-glwifi" = { includes = [ den.aspects.glwifi ]; };
 }

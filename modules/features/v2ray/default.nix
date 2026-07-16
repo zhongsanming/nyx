@@ -47,4 +47,5 @@ in {
       };
     };
   };
+  den.aspects."tags-v2ray" = { includes = [ den.aspects.v2ray ]; };
 }

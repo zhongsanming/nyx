@@ -17,4 +17,5 @@
       };
     };
   };
+  den.aspects."tags-hypridle" = { includes = [ den.aspects.hypridle ]; };
 }

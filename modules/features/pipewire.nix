@@ -5,4 +5,5 @@
       services.pipewire = { enable = true; alsa.enable = true; };
     };
   };
+  den.aspects."tags-pipewire" = { includes = [ den.aspects.pipewire ]; };
 }

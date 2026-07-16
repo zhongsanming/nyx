@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.nix-diff ];
     };
   };
+  den.aspects."tags-nix-diff" = { includes = [ den.aspects.nix-diff ]; };
 }

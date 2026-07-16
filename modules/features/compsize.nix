@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.compsize ];
     };
   };
+  den.aspects."tags-compsize" = { includes = [ den.aspects.compsize ]; };
 }

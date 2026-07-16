@@ -4,4 +4,5 @@
   home.packages = [ pkgs.vial ];
     };
   };
+  den.aspects."tags-vial" = { includes = [ den.aspects.vial ]; };
 }

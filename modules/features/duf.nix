@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.duf ];
     };
   };
+  den.aspects."tags-duf" = { includes = [ den.aspects.duf ]; };
 }

@@ -9,4 +9,5 @@
       };
     };
   };
+  den.aspects."tags-bibata" = { includes = [ den.aspects.bibata ]; };
 }

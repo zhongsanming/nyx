@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.rage ];
     };
   };
+  den.aspects."tags-rage" = { includes = [ den.aspects.rage ]; };
 }

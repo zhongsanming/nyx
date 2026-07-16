@@ -5,4 +5,5 @@
       programs.regreet.enable = true;
     };
   };
+  den.aspects."tags-greetd" = { includes = [ den.aspects.greetd ]; };
 }

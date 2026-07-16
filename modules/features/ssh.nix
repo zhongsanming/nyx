@@ -32,4 +32,5 @@
       };
     };
   };
+  den.aspects."tags-ssh" = { includes = [ den.aspects.ssh ]; };
 }

@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.difftastic ];
     };
   };
+  den.aspects."tags-difftastic" = { includes = [ den.aspects.difftastic ]; };
 }

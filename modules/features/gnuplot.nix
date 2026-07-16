@@ -4,4 +4,5 @@
   home.packages = [ pkgs.gnuplot ];
     };
   };
+  den.aspects."tags-gnuplot" = { includes = [ den.aspects.gnuplot ]; };
 }

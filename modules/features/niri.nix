@@ -9,4 +9,5 @@
       programs.niri.enable = true;
     };
   };
+  den.aspects."tags-niri" = { includes = [ den.aspects.niri ]; };
 }

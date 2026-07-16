@@ -12,4 +12,5 @@
       };
     };
   };
+  den.aspects."tags-nix" = { includes = [ den.aspects.nix ]; };
 }

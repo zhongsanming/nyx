@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.nix-tree ];
     };
   };
+  den.aspects."tags-nix-tree" = { includes = [ den.aspects.nix-tree ]; };
 }

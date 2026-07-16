@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.you-get ];
     };
   };
+  den.aspects."tags-you-get" = { includes = [ den.aspects.you-get ]; };
 }

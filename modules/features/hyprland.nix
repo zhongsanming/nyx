@@ -53,4 +53,5 @@
         lib.mkOverride 100 "${lib.getExe pkgs.alacritty}";
     };
   };
+  den.aspects."tags-hyprland" = { includes = [ den.aspects.hyprland ]; };
 }

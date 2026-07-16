@@ -4,4 +4,5 @@
   environment.systemPackages = [ pkgs.jid ];
     };
   };
+  den.aspects."tags-jid" = { includes = [ den.aspects.jid ]; };
 }
