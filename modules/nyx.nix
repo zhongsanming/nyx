@@ -5,7 +5,6 @@
       # preservation / impermanence
       den.aspects.impermanence
       # core system
-      # core system
       den.aspects.nix den.aspects.nix-opinionated den.aspects.nix-mirror
       den.aspects.users den.aspects.root den.aspects.sudo
       den.aspects.firewall den.aspects.i18n den.aspects.envvars
@@ -66,6 +65,7 @@
       # vaultix
       services.userborn.enable = true;
       vaultix.settings.hostPubkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXvckmMZo48If0O1qTTnQRjMeiARAp7sfWNDbX8p6Eu";
+
       # bootloader
       boot.loader = {
         systemd-boot = {
@@ -92,7 +92,14 @@
       nixpkgs.hostPlatform = "x86_64-linux";
       hardware.cpu.intel.updateMicrocode = true;
 
-      # disko: nvme0n1 disk config
+      # tmpfs root - ephemeral root filesystem across reboots
+      fileSystems."/" = {
+        device = "tmpfs";
+        fsType = "tmpfs";
+        options = [ "defaults" "size=4G" "mode=755" ];
+      };
+
+      # disko: nvme0n1 disk config (btrfs subvolumes for nix, persist, snapshots, swap)
       disko.devices.disk.main = {
         type = "disk";
         device = "/dev/nvme0n1";
@@ -117,28 +124,23 @@
               content = {
                 type = "btrfs";
                 extraArgs = [ "-f" ];
-                subvolumes = let
-                  mkSubvol = name: {
-                    mountpoint = "/${name}";
+                subvolumes = {
+                  "@nix" = {
+                    mountpoint = "/nix";
                     mountOptions = [ "compress=zstd" "noatime" ];
                   };
-                in {
-                  "@root" = mkSubvol "";
-                  "@home" = mkSubvol "home";
-                  "@nix" = mkSubvol "nix";
-                  "@var" = mkSubvol "var";
-                  "@tmp" = mkSubvol "tmp";
-                  "@persist" = mkSubvol "persist";
+                  "@persist" = {
+                    mountpoint = "/persist";
+                    mountOptions = [ "compress=zstd" "noatime" ];
+                  };
                   "@snapshot" = {
                     mountpoint = "/.snapshot";
                   };
                   "@swap" = {
                     mountpoint = "/.swapvol";
-                    swap = {
-                      swapfile = {
-                        size = "20480M";
-                        path = "swapfile";
-                      };
+                    swap.swapfile = {
+                      size = "20480M";
+                      path = "swapfile";
                     };
                   };
                 };
