@@ -154,6 +154,12 @@
           };
         };
       };
+
+      # needed for boot: mount btrfs subvolumes in initrd
+      fileSystems."/nix".neededForBoot = true;
+      fileSystems."/persist".neededForBoot = true;
+      fileSystems."/persist/home".neededForBoot = true;
+      fileSystems."/persist/var".neededForBoot = true;
     };
   };
 }
