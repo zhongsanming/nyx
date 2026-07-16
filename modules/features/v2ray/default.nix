@@ -15,8 +15,8 @@ in {
     nixos = { config, ... }: {
       vaultix = {
         secrets = {
-          v2addr = { file = ./system/settings/vaultix/v2addr.age; };
-          v2uuid = { file = ./system/settings/vaultix/v2uuid.age; };
+          v2addr = { file = ./v2addr.age; };
+          v2uuid = { file = ./v2uuid.age; };
         };
         templates = {
           v2client = {
