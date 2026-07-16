@@ -6,13 +6,26 @@
       den.aspects.nix den.aspects.nix-opinionated den.aspects.nix-mirror
       den.aspects.users den.aspects.root den.aspects.sudo
       den.aspects.firewall den.aspects.i18n den.aspects.envvars
-      den.aspects.constants den.aspects.doc
+      den.aspects.constants den.aspects.doc den.aspects.firmware
+      den.aspects.ssh
       # CLI tools
       den.aspects.fish den.aspects.git den.aspects.helix
       den.aspects.direnv den.aspects.tmux den.aspects.bat
       den.aspects.yazi den.aspects.eza den.aspects.bottom
       den.aspects.tealdeer den.aspects.fd den.aspects.ripgrep
       den.aspects.jq den.aspects.fonts den.aspects.pcscd
+      den.aspects.age-plugin-yubikey den.aspects.btrfs
+      den.aspects.choose den.aspects.comma den.aspects.compsize
+      den.aspects.difftastic den.aspects.duf den.aspects.dufs
+      den.aspects.git-filter-repo den.aspects.gitui den.aspects.grex
+      den.aspects.hexyl den.aspects.hgrep den.aspects.jid
+      den.aspects.lsof den.aspects.manix den.aspects.ncdu
+      den.aspects.nix-diff den.aspects.nix-du den.aspects.nix-index
+      den.aspects.nix-melt den.aspects.nix-output-monitor den.aspects.nix-tree
+      den.aspects.pfetch den.aspects.procs den.aspects.rage
+      den.aspects.tokei den.aspects.wget den.aspects.xh
+      den.aspects.ykman den.aspects.you-get den.aspects.yt-dlp
+      den.aspects.zola
       # desktop
       den.aspects.pipewire den.aspects.uwsm
       den.aspects.hyprland den.aspects.niri den.aspects.greetd
@@ -20,6 +33,11 @@
       den.aspects.bibata den.aspects.mako den.aspects.chromium
       den.aspects.fcitx5 den.aspects.hypridle den.aspects.hyprlock
       den.aspects.qutebrowser
+      den.aspects.blender den.aspects.copyq den.aspects.freecad
+      den.aspects.gh den.aspects.gnuplot den.aspects.kicad
+      den.aspects.mpv den.aspects.obs den.aspects.swayimg
+      den.aspects.telegram den.aspects.vial den.aspects.wofi
+      den.aspects.zathura
       # laptop
       den.aspects.bluetooth den.aspects.wireless
       den.aspects.glwifi den.aspects.libinput
