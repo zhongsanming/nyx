@@ -99,7 +99,7 @@
         options = [ "defaults" "size=4G" "mode=755" ];
       };
 
-      # disko: nvme0n1 disk config (btrfs subvolumes for nix, persist, snapshots, swap)
+      # disko: nvme0n1 disk config (btrfs subvolumes)
       disko.devices.disk.main = {
         type = "disk";
         device = "/dev/nvme0n1";
@@ -133,8 +133,13 @@
                     mountpoint = "/persist";
                     mountOptions = [ "compress=zstd" "noatime" ];
                   };
-                  "@snapshot" = {
-                    mountpoint = "/.snapshot";
+                  "@home" = {
+                    mountpoint = "/persist/home";
+                    mountOptions = [ "compress=zstd" "noatime" ];
+                  };
+                  "@var" = {
+                    mountpoint = "/persist/var";
+                    mountOptions = [ "compress=zstd" "noatime" ];
                   };
                   "@swap" = {
                     mountpoint = "/.swapvol";
