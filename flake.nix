@@ -7,6 +7,7 @@
 
   inputs = {
     den.url = "github:denful/den";
+    impermanence.url = "github:nix-community/impermanence";
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";

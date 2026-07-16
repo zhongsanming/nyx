@@ -2,6 +2,9 @@
 { inputs, ... }: {
   den.aspects.nyx = {
     includes = [
+      # preservation / impermanence
+      den.aspects.impermanence
+      # core system
       # core system
       den.aspects.nix den.aspects.nix-opinionated den.aspects.nix-mirror
       den.aspects.users den.aspects.root den.aspects.sudo
