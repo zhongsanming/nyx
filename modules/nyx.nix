@@ -100,6 +100,14 @@
       };
 
       # disko: nvme0n1 disk config (btrfs subvolumes)
+      # LUKS initrd config for YubiKey FIDO2 unlock
+      # After first boot, enroll YubiKey:
+      #   systemd-cryptenroll --fido2-device=auto /dev/nvme0n1p2
+      boot.initrd.luks.devices."crypted" = {
+        device = "/dev/nvme0n1p2";
+        allowDiscards = true;
+      };
+
       disko.devices.disk.main = {
         type = "disk";
         device = "/dev/nvme0n1";
@@ -122,30 +130,35 @@
             root = {
               size = "100%";
               content = {
-                type = "btrfs";
-                extraArgs = [ "-f" ];
-                subvolumes = {
-                  "@nix" = {
-                    mountpoint = "/nix";
-                    mountOptions = [ "compress=zstd" "noatime" ];
-                  };
-                  "@persist" = {
-                    mountpoint = "/persist";
-                    mountOptions = [ "compress=zstd" "noatime" ];
-                  };
-                  "@home" = {
-                    mountpoint = "/persist/home";
-                    mountOptions = [ "compress=zstd" "noatime" ];
-                  };
-                  "@var" = {
-                    mountpoint = "/persist/var";
-                    mountOptions = [ "compress=zstd" "noatime" ];
-                  };
-                  "@swap" = {
-                    mountpoint = "/.swapvol";
-                    swap.swapfile = {
-                      size = "20480M";
-                      path = "swapfile";
+                type = "luks";
+                name = "crypted";
+                settings.allowDiscards = true;
+                content = {
+                  type = "btrfs";
+                  extraArgs = [ "-f" ];
+                  subvolumes = {
+                    "@nix" = {
+                      mountpoint = "/nix";
+                      mountOptions = [ "compress=zstd" "noatime" ];
+                    };
+                    "@persist" = {
+                      mountpoint = "/persist";
+                      mountOptions = [ "compress=zstd" "noatime" ];
+                    };
+                    "@home" = {
+                      mountpoint = "/persist/home";
+                      mountOptions = [ "compress=zstd" "noatime" ];
+                    };
+                    "@var" = {
+                      mountpoint = "/persist/var";
+                      mountOptions = [ "compress=zstd" "noatime" ];
+                    };
+                    "@swap" = {
+                      mountpoint = "/.swapvol";
+                      swap.swapfile = {
+                        size = "20480M";
+                        path = "swapfile";
+                      };
                     };
                   };
                 };
