@@ -1,4 +1,3 @@
-# V2Ray client aspect: vaultix secrets, v2ray service, proxy keybindings
 { inputs, den, ... }:
 let
   mkOutbound = { addr, port, uuid, protocol ? "vmess", encryption ? "chacha20-poly1305" }: {
@@ -13,7 +12,6 @@ let
   };
 in {
   den.aspects.v2ray = {
-    # vaultix secrets/templates + v2ray service
     nixos = { config, ... }: {
       vaultix = {
         secrets = {
@@ -37,14 +35,11 @@ in {
           };
         };
       };
-
       services.v2ray = {
         enable = true;
         configFile = config.vaultix.templates.v2client.path;
       };
     };
-
-    # qutebrowser proxy keybindings (home-manager)
     homeManager = { config, ... }: {
       programs.qutebrowser.keyBindings.normal = {
         "<Ctrl-l>" = "config-cycle content.proxy socks5://localhost:1080 none";
