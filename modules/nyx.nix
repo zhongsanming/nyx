@@ -2,8 +2,8 @@
 { inputs, ... }: {
   den.aspects.nyx = {
     includes = [
-      # preservation / impermanence
-      den.aspects.impermanence
+      # preservation
+      den.aspects.preservation
       # core system
       den.aspects.nix den.aspects.nix-opinionated den.aspects.nix-mirror
       den.aspects.users den.aspects.root den.aspects.sudo
@@ -155,11 +155,6 @@
         };
       };
 
-      # needed for boot: mount btrfs subvolumes in initrd
-      fileSystems."/nix".neededForBoot = true;
-      fileSystems."/persist".neededForBoot = true;
-      fileSystems."/persist/home".neededForBoot = true;
-      fileSystems."/persist/var".neededForBoot = true;
     };
   };
 }
